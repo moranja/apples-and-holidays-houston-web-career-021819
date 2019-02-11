@@ -59,7 +59,6 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  #new_string = ""
   holiday_hash.each do |season, hash|
     puts "#{season.capitalize}:"
     hash.each do |holiday, stuff|
@@ -67,6 +66,9 @@ def all_supplies_in_holidays(holiday_hash)
         stuff.each do |i|
           holiday_string << "#{i}, "
         end
+        
+        # This finds all underscores, and creates an array that the next block iterates with to fix underscores and capitalization so that the format matches the answer.
+        
         fix_underscores = holiday_string.split("")
         counter = 0
         counter_array = []
@@ -78,9 +80,9 @@ def all_supplies_in_holidays(holiday_hash)
         end
         
         counter_array.collect do |i|
-          next_value = i + 1
+          capit = i + 1
           fix_underscores[i] = " "
-          fix_underscores[next_value] = fix_underscores[next_value].upcase
+          fix_underscores[capit] = fix_underscores[capit].upcase
         end
         
         join_fix = fix_underscores.join
