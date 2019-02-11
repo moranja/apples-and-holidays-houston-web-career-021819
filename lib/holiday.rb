@@ -88,8 +88,6 @@ def all_supplies_in_holidays(holiday_hash)
         join_fix = fix_underscores.join
 
         puts join_fix.chomp(", ")
-        
-    
     end
   end
 end
@@ -97,9 +95,23 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
-
+  holiday_list = []
+  check_int = 0
+  
+  holiday_hash.each do |season, holiday|
+    holiday.each do |holiday, item_array|
+      item_array.each do |items|
+        if items == "BBQ"
+          check_int = 1
+        end
+      end
+      if check_int == 1
+        holiday_list << holiday
+        check_int = 0
+      end
+    end
+  end
+  holiday_list
 end
 
 
