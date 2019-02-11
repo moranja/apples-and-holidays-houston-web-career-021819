@@ -93,7 +93,7 @@ def all_supplies_in_holidays(holiday_hash)
         
         join_fix = fix_underscores.join
 
-        puts join_fix.chomp(", ")
+        #puts join_fix.chomp(", ")
         
     #end
   end
