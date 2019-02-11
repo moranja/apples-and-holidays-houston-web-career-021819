@@ -78,7 +78,7 @@ def all_supplies_in_holidays(holiday_hash)
         counter = 0
         counter_array = []
         fix_underscores.each do |i|
-          if i == "_"
+          if i == "e"
             counter_array << counter  
           end
           counter +=1
