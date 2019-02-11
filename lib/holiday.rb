@@ -70,11 +70,6 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, hash|
     puts "#{season.capitalize}:"
     hash.each do |holiday, stuff|
-        holiday_string_step = holiday.to_s
-      # confused with how to get the layout correct...
-      #if holiday_string_step.include? "_"
-       # holiday_string = "  #{holiday_string_step.split('_').map(&capitalize).join(' ')}"
-      #else
         holiday_string =  "  #{holiday.capitalize}: "
         stuff.each do |i|
           holiday_string << "#{i}, "
