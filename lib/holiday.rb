@@ -85,10 +85,10 @@ def all_supplies_in_holidays(holiday_hash)
         end
         
         counter_array.collect do |i|
-          next = i + 1
+          next_value = i + 1
           binding.pry
           fix_underscores[i] = " "
-          fix_underscores[next] = fix_underscores.upsize
+          fix_underscores[next_value] = fix_underscores.upsize
         end
         
         join_fix = fix_underscores.join
