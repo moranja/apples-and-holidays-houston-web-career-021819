@@ -86,9 +86,13 @@ def all_supplies_in_holidays(holiday_hash)
         
         counter_array.collect do |i|
           next = i + 1
-          fix_underscores[i] = fix_underscores[i]
-          
-        puts holiday_string.chomp(", ")
+          fix_underscores[i] = " "
+          fix_underscores[next] = fix_underscores.upsize
+        end
+        
+        join_fix = fix_underscores.join
+
+        puts join_fix.chomp(", ")
         
     #end
   end
