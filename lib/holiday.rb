@@ -59,13 +59,6 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  # iterate through holiday_hash and print items such that your readout resembles:
-  # Winter:
-  #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
-  # Summer:
-  #   Fourth Of July: Fireworks, BBQ
-  # etc.
   new_string = ""
   holiday_hash.each do |season, hash|
     puts "#{season.capitalize}:"
@@ -86,7 +79,6 @@ def all_supplies_in_holidays(holiday_hash)
         
         counter_array.collect do |i|
           next_value = i + 1
-          #binding.pry
           fix_underscores[i] = " "
           fix_underscores[next_value] = fix_underscores[next_value].upcase
         end
@@ -95,8 +87,8 @@ def all_supplies_in_holidays(holiday_hash)
 
         puts join_fix.chomp(", ")
         
-    #end
-  end
+    
+    end
   end
 end
 
