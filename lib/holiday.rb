@@ -88,7 +88,7 @@ def all_supplies_in_holidays(holiday_hash)
           next_value = i + 1
           #binding.pry
           fix_underscores[i] = " "
-          fix_underscores[next_value] = fix_underscores.upsize
+          fix_underscores[next_value] = fix_underscores.upcase
         end
         
         join_fix = fix_underscores.join
