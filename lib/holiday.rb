@@ -74,7 +74,7 @@ def all_supplies_in_holidays(holiday_hash)
         stuff.each do |i|
           holiday_string << "#{i}, "
         end
-        fix_underscores = holiday_string.split
+        fix_underscores = holiday_string.split("")
         counter = 0
         counter_array = []
         fix_underscores.each do |i|
